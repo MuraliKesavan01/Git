@@ -1,0 +1,20 @@
+{
+  "Id": "Policy1643964121088",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1643964090544",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::mybucket01239/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "27.5.85.63"
+        }
+      },
+      "Principal": "*"
+    }
+  ]
+}
